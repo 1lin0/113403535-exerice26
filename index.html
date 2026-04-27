@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Image Practice</title>
+
+<style>
+body{
+    margin:0;
+    padding:40px;
+    font-family:Arial, sans-serif;
+    background:#f5f5f5;
+    text-align:center;
+}
+
+.container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
+    margin-top:50px;
+}
+
+/* 左邊圖片 */
+.img-left{
+    width:33%;
+    max-width:300px;
+    height:auto;
+    border-radius:18px;
+    object-fit:contain;   /* no distortion */
+}
+
+/* 中間圓形圖片 */
+.img-circle{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    border:3px solid #333;
+    object-fit:cover;
+}
+
+/* 右邊圖片 */
+.img-right{
+    width:33%;
+    max-width:300px;
+    height:300px;
+    object-fit:fill;   /* distortion */
+}
+</style>
+</head>
+
+<body>
+
+<h2>Let's practice styling images by CSS</h2>
+
+<div class="container">
+    
+    <!-- 左邊 -->
+    <img src="paris.jpg" class="img-left">
+
+    <!-- 中間 -->
+    <img src="lake.jpg" class="img-circle">
+
+    <!-- 右邊 -->
+    <img src="paris.jpg" class="img-right">
+
+</div>
+
+</body>
+</html>
